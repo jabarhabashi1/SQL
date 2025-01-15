@@ -1,19 +1,19 @@
 import sqlite3
 
-# اتصال به پایگاه داده
-db_path = r'C:\Users\Jabar\Desktop\rock_types.db'  # مسیر فایل پایگاه داده
+# Connect to the database
+db_path = r'C:\Users\your data.db'  # Database file path
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
-# خواندن تمام داده‌ها از جدول
+# Read all data from the table
 cursor.execute("SELECT * FROM RockTypes")
 rows = cursor.fetchall()
 
-# نمایش داده‌ها
+# Display data
 print("ID | Rock Type | Category | Minerals")
 print("-" * 100)
 for row in rows:
     print(f"{row[0]} | {row[1]} | {row[2]} | {row[3]}")
 
-# بستن اتصال
+# Close connection
 conn.close()
