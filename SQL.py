@@ -2,7 +2,7 @@ from docx import Document
 import sqlite3
 
 # Step 1: Read the Word document
-doc_path = r"C:\Users\Jabar\Desktop\Rock types.docx"  # Replace with your file path
+doc_path = r"C:\Users\your data.docx"  # Replace with your file path
 doc = Document(doc_path)
 
 # Step 2: Parse the document and organize data
